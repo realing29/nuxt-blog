@@ -30,16 +30,27 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eveniet aliquam corrupti tempora soluta nam, voluptatum doloremque, quos incidunt quas molestiae adipisci voluptas, dolore mollitia deleniti facere qui nemo culpa!</p>
     </main>
     <footer>
-      
+      <!-- Form -->
+
+      <div class="comments" v-if='false'>
+        <app-comment
+          v-for="comment in 4"
+          :key="comment"
+          :comment='comment'
+        />
+      </div>
+      <div class="text-center" v-else>Комментариев нет</div>
     </footer>
   </article>
 </template>
 
 <script>
+import AppComment from '@/components/main/Comment'
 export default {
   validate({ params }) {
     return Boolean(params.id);
-  }
+  },
+  components: {AppComment}
 };
 </script>
 <style lang="stylus" scoped>
