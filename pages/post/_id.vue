@@ -30,7 +30,7 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus eveniet aliquam corrupti tempora soluta nam, voluptatum doloremque, quos incidunt quas molestiae adipisci voluptas, dolore mollitia deleniti facere qui nemo culpa!</p>
     </main>
     <footer>
-      <!-- Form -->
+      <app-comment-form />
 
       <div class="comments" v-if='false'>
         <app-comment
@@ -46,11 +46,12 @@
 
 <script>
 import AppComment from '@/components/main/Comment'
+import AppCommentForm from '@/components/main/CommentForm'
 export default {
   validate({ params }) {
     return Boolean(params.id);
   },
-  components: {AppComment}
+  components: {AppComment, AppCommentForm}
 };
 </script>
 <style lang="stylus" scoped>
