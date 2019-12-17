@@ -8,7 +8,7 @@
       :rules="rules" ref="form" 
       @submit.native.prevent="onSubmit"
     >
-      <h1>Авторизация</h1>
+      <h2>Авторизация</h2>
 
       <el-form-item label="Логин" prop="login">
         <el-input v-model.trim="controls.login" />
