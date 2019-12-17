@@ -87,10 +87,8 @@ export default {
             }
             await this.$store.dispatch('auth/login', formData)
             this.$router.push('/admin')
-            console.log('aasd')
           } catch(e){
             this.loading = false
-            console.log('e', e)
           }
         }
       })
