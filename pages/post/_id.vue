@@ -67,6 +67,7 @@ export default {
   components: {AppComment, AppCommentForm}
 };
 </script>
+
 <style lang="stylus" scoped>
   .post
     max-width 600px
