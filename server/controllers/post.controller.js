@@ -6,8 +6,8 @@ module.exports.create = async (req, res) =>{
     text: req.body.text,
     imageUrl: `/${req.file.filename}`
   })
-
   try {
+    
     await post.save()
     res.status(201).json(post)
   } catch (e) {

@@ -6,7 +6,7 @@ const router = Router()
 
 
 // Admin
-// /api.post/admin
+// /api/post/admin
 router.post(
   '/admin/',
   passport.authenticate('jwt', {session: false}),

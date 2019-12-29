@@ -46,7 +46,7 @@ export const actions = {
   },
   autoLogin({dispatch}){
     const cookieStr = process.browser
-      ? document.cokkie
+      ? document.cookie
       : this.app.context.req.headers.cookie
 
     const cookies = Cookie.parse(cookieStr || '')  || {}
@@ -71,7 +71,6 @@ function isJWTValid(token){
   }
 
   const jwtData = jwtDecode(token) || {}
-  console.log(jwtData)
   const expires = jwtData.exp || 0
 
   return (new Date().getTime() / 1000) < expires
