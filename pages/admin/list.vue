@@ -74,7 +74,7 @@ export default {
         this.posts = this.posts.filter(p => p._id != id)
         this.$message.success('Пост удален')
       }catch(e){
-
+        
       }
       
     }

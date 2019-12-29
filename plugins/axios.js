@@ -2,7 +2,7 @@ export default function({$axios, redirect, store}) {
 
   $axios.interceptors.request.use(request => {
     if(store.getters['auth/isAuthenticated'] && !request.headers.common['Authorization']) {
-      const token = store.getters
+      const token = store.getters['auth/token']
       request.headers.common['Authorization'] = `Bearer ${token}`
     }
     
@@ -12,7 +12,7 @@ export default function({$axios, redirect, store}) {
   $axios.onError(error => {
     if(error.response){
       if(error.response.status === 401){
-        redirect('admin/login?massage=session')
+        redirect('/admin/login?massage=session')
         store.dispatch('auth/logout')
       }
 
