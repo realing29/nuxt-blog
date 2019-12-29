@@ -15,7 +15,7 @@ module.exports.login = async (req, res) => {
         userId: candidate._id
       }, keys.JWT, {expiresIn: 60 * 60})
       // зддесь res[.status(200)] по умолчанию передает статус 200 можно не писать 
-      .res.json({token})
+        res.status(200).json({token})
     } else {
       res.status(401).json({message: "Пароль неверен"})
     }
