@@ -7,9 +7,10 @@ module.exports.create = async (req, res) => {
     const comment = new Comment({name, text, postId})
 
     await comment.save()
-
+    
     const post = await Post.findById(postId)
-    post.comment.push(comment._id)
+    post.comments.push(comment._id)
+    console.log(post)
     await post.save()
 
     res.status(201).json(comment)
