@@ -9,7 +9,8 @@
 
       <small>
         <i class="el-icon-time"></i>
-        {{ new Date(post.date).toLocaleString() }}
+        <!-- | - вызов фильтра -->
+        {{ post.date | date }}
       </small>
     </header>
     <div class="post-body">
