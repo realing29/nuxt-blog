@@ -10,7 +10,6 @@ module.exports.create = async (req, res) => {
     
     const post = await Post.findById(postId)
     post.comments.push(comment._id)
-    console.log(post)
     await post.save()
 
     res.status(201).json(comment)

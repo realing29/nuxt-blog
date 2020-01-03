@@ -14,7 +14,8 @@ mongoose.connect(
   { 
     useFindAndModify: false, 
     useUnifiedTopology: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useNewUrlParser: true
   })
   .then(() => console.log('MongoDB Connected...'))
   .catch(error => console.log(error))
