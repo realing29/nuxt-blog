@@ -6,10 +6,8 @@
   >
     <header slot='header' class="post-header">
       <h3>{{post.title}}</h3>
-
       <small>
         <i class="el-icon-time"></i>
-        <!-- | - вызов фильтра -->
         {{ post.date | date }}
       </small>
     </header>
