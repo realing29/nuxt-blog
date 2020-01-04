@@ -33,7 +33,16 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    // Doc: https://www.npmjs.com/package/nuxt-seo-module
+    ['nuxt-seo-module', {
+      robots: {
+        // ROBOTS.TXT options 
+      },
+      sitemap: [
+        // sitemaps options is an array of object
+      ]
+    }]
   ],
 
   axios: {
